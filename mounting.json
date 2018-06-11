@@ -1,0 +1,82 @@
+{
+    "finishes": {
+        5:{
+            "finishing_id": 5, //artshot
+            "finishing_color" : "#f0f8ff"
+        },
+        6:{
+            "finishing_id": 6, //blackout
+            "finishing_color" : "#444b4f"
+        }
+    }, 
+    "frames":{
+        25: {
+            "mounting_id" : 3,  //SHADOWBOX
+            "mounting_color_id" : 25, // GRAPHISTE
+            "color" : "",
+            "image_url" : ""
+        },
+        24: {
+            "mounting_id" : 3, 
+            "mounting_color_id" : 24, //WENGE
+            "color" : "",            
+            "image_url" : ""
+        },
+        4: {
+            "mounting_id" : 3, //shadowbox
+            "mounting_color_id" : 4, //Black Satin 
+            "color" : "",     
+            "image_url" : ""  
+        },
+        5: {
+            "mounting_id" : 3, //shadowbox
+            "mounting_color_id" : 5 , //oak
+            "color" : "",   
+            "image_url" : ""  
+        },
+        7: {
+            "mounting_id" : 3, //shadowbox
+            "mounting_color_id" : 7, //white Satin 
+            "color" : "",     
+            "image_url" : ""  
+        },
+        
+        3: {
+            "mounting_id" : 3, //shadowbox
+            "mounting_color_id" : 3, // black oak
+            "color" : "",   
+            "image_url" : ""  
+        },
+        6: {
+            "mounting_id" : 3, //shadowbox
+            "mounting_color_id" : 6, //walnut
+            "color" : "",   
+            "image_url" : ""  
+        },
+  
+        8: {
+            "mounting_id" : 9, //framed
+            "mounting_color_id" : 8, //Black aluminium
+            "color" : "",   
+            "image_url" : ""  
+        },
+        10: {
+            "mounting_id" : 9, //shadowbox
+            "mounting_color_id" : 10, //Matt mahogany
+            "color" : "",   
+            "image_url" : ""  
+        },
+        11: {
+            "mounting_id" : 9, //shadowbox
+            "mounting_color_id" :11, //White wood
+            "color" : "",   
+            "image_url" : ""  
+        },
+        21: {
+            "mounting_id" : 9, //shadowbox
+            "mounting_color_id" :21, //White wood
+            "color" : "",   
+            "image_url" : ""  
+        }
+    }
+  }
