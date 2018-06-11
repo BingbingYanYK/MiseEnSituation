@@ -1,0 +1,206 @@
+.lg-container{
+    width: 100%;
+    margin: 0 auto;
+    @media (min-width: 992px){
+      max-width: 960px;
+    }
+    @media (min-width: 1200px){
+      max-width: 1140px;
+    }
+    @media (min-width: 1500px) { 
+      max-width: 1400px;
+    }
+}
+
+.product-slider{
+    position: relative; 
+    @media (min-width: 993px){
+        min-height: 750px;
+    }
+    @media (min-width: 768px) and (max-width: 992px){
+      min-height: 600px;
+    }
+    @media (max-width: 767px){
+      min-height: 60vh;
+    }
+    >input{
+        display: none; 
+    }
+    .slide{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transform: scale(0);
+        transition: all .7s ease-in-out;
+        >img{
+            max-width: 80%;
+            max-height: 80%;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%,-50%);
+        }
+        .prev,.next{
+            transform: translateY(-50%);
+            position: absolute;
+            top: 50%;
+            color: #515151;
+            font-size: 50px;
+            @media (min-width: 768px){
+                display: none;
+            }
+        }
+        .prev{
+            left: 20px;
+        }
+        .next{
+            right: 20px;
+        }
+    }
+
+    >input:checked + .slide{
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity 1s ease-in-out;
+    }
+    .rotate-view{
+        perspective: 1200px;
+        >img{
+            width: 50%;
+        }
+        img.rotate-image1{
+            transform: translate(-50%,-50%) rotateY(50deg); 
+        }
+        img.rotate-image2{
+            transform: translate(-50%,-50%) rotateY(-50deg); 
+        }
+    }
+ 
+    .room-view{
+        position: relative;
+        height: 100%;
+        width :100%; 
+        .product-wrapper{
+            z-index: -2;
+            margin: 0 auto;
+            box-shadow: 3px 2px 11px 0 rgba(0, 0, 0, 0.5);
+            position: absolute;
+            transform: translate(-50%, 0);
+            left: 50%;
+            display: none;
+            .image-wrapper{
+                position: relative;
+            }
+            img{
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+        div[class^='frame-']{
+          background-size: contain;
+          position: absolute;
+          //left: 50%;
+        }
+        .frame-ml,.frame-mr{//
+          background-image: url(https://en.muzeo.com/sites/default/files/cadre_mes/caisse_americaine_noire_a_pallier_07-copie.jpg);
+        }
+        .frame-mr{
+          transform : rotateZ(180deg);
+          // background-image: url(https://en.muzeo.com/sites/default/files/cadre_mes/caisse_americaine_noire_a_pallier_09.jpg);
+        }
+        .frame-tc, .frame-bc{
+          //transform : rotateZ(90deg);
+          background-image: url("https://fr.muzeo.com/sites/default/files/cadre_mes/caisse_americaine_noire_a_pallier_4.jpg");
+        }
+        .frame-bc{
+          transform : rotateZ(180deg);
+          // background-image: url("https://en.muzeo.com/sites/default/files/cadre_mes/caisse_americaine_noire_a_pallier_11_0.jpg");
+        }
+        .frame-bl,.frame-br,.frame-tl,.frame-tr{
+          background-image: url("https://en.muzeo.com/sites/default/files/cadre_mes/caisse_americaine_noire_a_pallier_10_0.jpg");
+        }
+        .frame-br{
+          background-image: url("https://en.muzeo.com/sites/default/files/cadre_mes/caisse_americaine_noire_a_pallier_12-copie.jpg"); 
+        }
+        .frame-tl{
+          background-image: url("https://en.muzeo.com/sites/default/files/cadre_mes/caisse_americaine_noire_a_pallier_03-copie.jpg");
+        }
+        .frame-tr{
+          background-image: url("https://en.muzeo.com/sites/default/files/cadre_mes/caisse_americaine_noire_a_pallier_05_0.jpg");
+        }
+        .deco-container{
+            z-index: -1;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            img{
+                width: 70%;
+            }
+        }
+    }
+}
+
+.deco-selector{
+    @media (max-width: 767px){ 
+      display: flex;
+      select{
+        width: 50%;
+      }
+    }
+    @media (min-width: 768px){
+      .color-selector{
+        position: absolute; 
+        //z-index: 999;
+        bottom : 80px ;
+        left: 20px;
+      }
+      .room-selector{
+        position: absolute; 
+        //z-index: 999;
+        bottom : 40px ;
+        left: 20px;
+      }
+    }
+}
+
+.view-selector{
+    @media (max-width: 767px){
+      display: none;
+    }
+    @media (min-width: 768px) {
+        position: absolute;
+        top: 15px;
+        left: 30px;
+        display: flex;
+        flex-flow: column wrap;
+        max-height: 55%;
+        label{
+            cursor: pointer;
+            margin-right: 15px;
+            width: 50px;
+            line-height: 50px;
+            height: 50px;
+            background-color: #fff;
+            text-align: center;
+            border : 1px solid #baa85a;
+            &:hover{
+                box-shadow : 0px 0px 10px 1px #515151;
+            }
+        }
+        img{
+            width: 90%;
+            pointer-events: none;
+        }
+    }
+    // @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none),(min-width: 768px) {
+    //   // IE 10/11  detection 
+    //   display: flex;
+    //   flex-flow: row wrap;
+    //   width : 150px;
+    // }
+}
